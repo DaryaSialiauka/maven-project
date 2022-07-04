@@ -21,6 +21,7 @@ public class Controller extends HttpServlet {
 	private static final String phone = "phone";
 	private static final String email = "email";
 	private static final String gender = "gender";
+	private static final String command = "command";
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -41,10 +42,10 @@ public class Controller extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		if(entrance.equals(request.getParameter("command"))) {
+		if(entrance.equals(request.getParameter(command))) {
 			response.getWriter().println(login + separator + request.getParameter(login));
 			response.getWriter().println(password + separator + request.getParameter(password));
-		} else if(registration.equals(request.getParameter("command"))) {
+		} else if(registration.equals(request.getParameter(command))) {
 			response.getWriter().println(login + separator + request.getParameter(login));
 			response.getWriter().println(password + separator + request.getParameter(password));
 			response.getWriter().println(name + separator + request.getParameter(name));
