@@ -9,7 +9,7 @@
 
 <body>
 <h1>Hello</h1>
-	<form action="Controller" method="post">
+	<form action="../Controller" method="post">
 		<input type="hidden" name="command" value="entrance" /> 
 		
 		Enter login:<br />
