@@ -43,17 +43,26 @@ public class Controller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if(entrance.equals(request.getParameter(command))) {
-			response.getWriter().println(login + separator + request.getParameter(login));
-			response.getWriter().println(password + separator + request.getParameter(password));
+			doLogin(request, response);
 		} else if(registration.equals(request.getParameter(command))) {
-			response.getWriter().println(login + separator + request.getParameter(login));
-			response.getWriter().println(password + separator + request.getParameter(password));
-			response.getWriter().println(name + separator + request.getParameter(name));
-			response.getWriter().println(datebirth + separator + request.getParameter(datebirth));
-			response.getWriter().println(phone + separator + request.getParameter(phone));
-			response.getWriter().println(email + separator + request.getParameter(email));
-			response.getWriter().println(gender + separator + request.getParameter(gender));
+			doRegistration(request, response);
 		}
 	}
-
+	
+	private void doLogin(HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+		response.getWriter().println(login + separator + request.getParameter(login));
+		response.getWriter().println(password + separator + request.getParameter(password));
+	}
+	
+	private void doRegistration(HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+		response.getWriter().println(login + separator + request.getParameter(login));
+		response.getWriter().println(password + separator + request.getParameter(password));
+		response.getWriter().println(name + separator + request.getParameter(name));
+		response.getWriter().println(datebirth + separator + request.getParameter(datebirth));
+		response.getWriter().println(phone + separator + request.getParameter(phone));
+		response.getWriter().println(email + separator + request.getParameter(email));
+		response.getWriter().println(gender + separator + request.getParameter(gender));
+	}
 }
