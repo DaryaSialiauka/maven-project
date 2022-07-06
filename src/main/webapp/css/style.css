@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body {
+	background-image: url(../image/background.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	font-family: "Consolas";
+}
+
+h1 {
+	font-family: "Consolas";
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px
+		rgba(255, 255, 255, 0.3);
+	text-align: center;
+}
+
+.formstyle {
+	padding: 50px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	padding: 10px;
+}
+
+input.bot1 {
+	background: linear-gradient(to bottom, #FFFFFF, #E6E6E6) #F5F5F5
+		repeat-x;
+	border-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.2) #B3B3B3;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	color: #333333;
+	display: block;
+	font-size: 14px;
+	width: 120px;
+	line-height: 20px;
+	margin: 20px auto;
+	padding: 4px 12px;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	transition-duration: 0.3s;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+input.bot1:hover {
+	transform: translateY(-5px);
+}
+
+a {
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.other {
+	text-align: center;
+}
